@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+    </head>
+    <body>
+        <h2>Area of a Rectangle</h2>
+        <script>
+            function Rectangle(x,y){
+                this.height=x;
+                this.width=y;
+            }
+            Rectangle.prototype.getArea=function(){
+                return (this.height*this.width);
+            }
+            Rectangle r = new Rectangle(4,5);
+            r.height=50;
+            r.getArea();
+            document.write("The height of a rectangle is: "+rectangle.height+"cm"+"<br>");
+            document.write("The width of a rectangle is: "+rectangle.width+"cm"+"<br>");
+            document.write("The area of a rectangle is: "+rectangle.getArea()+"sqcm");
+
+        </script>
+    </body>
+</html>

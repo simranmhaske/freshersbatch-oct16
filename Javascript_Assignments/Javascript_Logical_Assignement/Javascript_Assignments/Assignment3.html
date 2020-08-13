@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction(){
+                var rows=prompt("Enter number of rows");
+                var columns = prompt("Enter number of columns");
+                var table="";
+                for(i=1;i<=rows;i++){
+                    table=table+'<tr>';
+                        for(j=1;j<columns;j++){
+                            table=table+'<td>' +"row: "+i+ " col: "+j+ '</td>';
+                        }
+                    table=table+'</tr>';    
+                }
+                document.getElementById('result').innerHTML=table;
+            }
+        </script>
+        <title>
+            Creating a Table
+        </title>
+    </head>
+    <body>
+        <h2>Creating a Table</h2>
+        <input type="button" value="Create a Table" onclick="myFunction()"/><br><br>
+        <table border="1" id="result"></table>
+    </body>
+</html>

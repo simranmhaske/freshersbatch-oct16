@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment 2
+        </title>
+    </head>
+    <body>
+        <h2>Functional Programming Assignment No 3
+            <script>
+                function find(myArray,test){
+                    for(let i=0;i<myArray.length;i++){
+                        if(test(myArray[i])){
+                            return myArray[i];
+                        }
+                    }
+                }
+                function isEven(value){
+                    return (value%2==0);
+                }
+                console.log(find([1,8,3,5,4],isEven));
+            </script>
+        </h2>
+    </body>
+</html>

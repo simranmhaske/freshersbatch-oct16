@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction(){
+                var name=document.getElementById('name').value;
+                if(name==""){
+                    alert("Please fill in the required data.")
+                }else{
+                document.getElementById('result').innerHTML="Hello "+name+" Good Morning!!"
+            }
+            }
+        </script>
+        <title>Greeting</title>
+    </head>
+    <body>
+        Please enter your name:<br>
+        <input type="text" id="name" placeholder="Ënter your name" required/>
+        <input type="button" value="Greet" onclick="myFunction()"/>
+        <div id="result"></div>
+    </body>
+</html>

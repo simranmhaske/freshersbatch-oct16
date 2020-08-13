@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction(){
+                                
+                var str="*";
+                var str1=['*','*','*'];
+                for(i=0;i<3;i++){
+                var number=prompt("Enter the number");
+                if(number>1&&number<30){
+                    for(j=0;j<number-1;j++){
+                        str1[i]=str1[i]+str;
+                        document.getElementById('result').innerHTML=str1.join('<br>');
+                    }
+                    
+                   
+                }else{
+                    alert("Enter value between 1 & 30");
+                }
+                
+             }
+            }
+        </script>
+    <title>
+        Prompt Input
+    </title>
+    </head>
+    <body>
+        <input type="button" value="check" onclick="myFunction()"/>
+        <div id="result"></div>
+    </body>
+</html>

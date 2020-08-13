@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script> 
+           
+            function temp(){
+                var tempInCel;
+                var tempInFah=document.getElementById('number').value;
+                if(tempInFah==""){
+                    alert("Please enter the required data")
+                }else{
+                tempInCel=(5/9)*(tempInFah-32);
+                document.getElementById('result').innerHTML="Temperature in Celcius: "+tempInCel;
+            }
+            }
+
+        </script>
+        <title>
+            Fahrenheit to Celsius
+        </title>
+    </head>
+    <body>
+        <label> Temperature in Fahrenheit:</label><br><br>
+        <input type="number" id="number" placeholder="Enter Temperature" required/>
+        <input type="button" value="Show Result" onclick="temp()"/>
+        <div id="result"></div>
+    </body>
+</html>

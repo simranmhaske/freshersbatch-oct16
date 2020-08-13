@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Case Study 2
+        </title>
+    </head>
+    <body>
+        <h2>Case Study on BankAccount</h2>
+        <script>
+            function BankAccount(accNum,accHolderName,accBal){
+                this.accountNumber=accNum;
+                this.accountHolderName=accHolderName;
+                this.accountBalance=accBal;
+            }
+            function Savings(accNum,accHolderName,accBal,isSal){
+                BankAccount.call(this,accNum,accHolderName,accBal);
+                this.isSalary=isSal;
+                this.withdraw=function(Amount){
+                    return (accBal-=Amount);
+                }
+                this.getCurrentBalance=function(){
+                    return accBal;
+                }
+            }
+            Savings.prototype = Object.create(BankAccount.prototype);
+            Savings.prototype.constructor = Savings;
+            function Current(accNum,accHolderName,accBal,odLim){
+                BankAccount.call(this,accNum,accHolderName,accBal);
+                this.odLimit=odLim;
+                this.withdraw1=function(Amount){
+                    accBal-=Amount;
+                    if(accBal<odLim){
+                        alert("Account Balance is less than odLimit");
+                    }
+                    return accBal;
+                }
+                this.getCurrentBalance=function(){
+                    return accBal;
+                }
+            }
+            
+            Current.prototype = Object.create(BankAccount.prototype);
+            Current.prototype.constructor = Current;
+            var savings = new Savings(643256,"Simran",8000,10000);
+            var current = new Current(875347,"Sakshi",9000,7000);
+
+            savings.withdraw(2000);
+            document.write(savings.getCurrentBalance()+"<br>");
+            current.withdraw1(2000);
+            document.write(current.getCurrentBalance()+"<br>");
+            console.log(savings);
+
+        </script>
+    </body>
+</html>

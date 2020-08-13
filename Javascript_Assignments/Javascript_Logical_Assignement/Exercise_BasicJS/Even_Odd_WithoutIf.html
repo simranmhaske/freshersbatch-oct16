@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function findEvenOdd(){
+                var num = document.getElementById('num').value;
+                var trick=["Even","Odd"];
+                document.getElementById('result').innerHTML=num+" is "+trick[num%2];
+            }
+        </script>
+        <title>
+            Even or Odd without If
+        </title>
+    </head>
+    <body>
+        <h2>Enter a number to test whether it is an even number or an odd number</h2>
+        <input type="number" id="num" name="num" placeholder="Enter a number"/>
+        <input type="button" value="Find Even or Odd" onclick="findEvenOdd()" /> 
+        <div style="margin-top: 10px;" id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction(noOfFlips){
+                var heads = 0, tails = 0;
+                for(var i = 0; i < noOfFlips; i++) {
+                    if(Math.random() < 0.50) {
+            heads++;
+        } else {
+            tails++;
+        }
+    }
+    var fractOfHeads=heads/noOfFlips;
+    document.getElementById('result').innerHTML="The fraction of the Heads occured is: "+fractOfHeads;
+            }
+        </script>
+        <title>
+            Fraction Of Heads
+        </title>
+    </head>
+    <body>
+        Enter the number of flips: <input type="number" id="noOfFlips" placeholder="Enter the number of flips">
+        <input type="submit" value="Check" onclick="myFunction(document.getElementById('noOfFlips').value)"/>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 4</title>
+    </head>
+    <body>
+        <h2>Functional Programming Assignment No 4</h2>
+        <script>
+            function map(myArray,f){
+                var resultArray=[];
+                for(i=0;i<myArray.length;i++){
+                    resultArray.push(f(myArray[i]));
+                    
+                }
+                return resultArray;
+            }
+            function square (x){
+                  return x*x;
+               }
+            console.log(map([1,2,3,4,5],square));
+            console.log(map([1,4,9,16,25],Math.sqrt));   
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

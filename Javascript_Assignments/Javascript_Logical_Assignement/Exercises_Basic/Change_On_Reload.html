@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                text-align: center;
+            }
+            #good{
+                color: blue;
+            }
+            #bad{
+                color: black;
+            }
+        </style>
+        <script>
+            randomNumber=Math.floor(Math.random()*2)+1;
+            window.onload=function(){
+                if(randomNumber==1){
+                    document.getElementById("good").style.display = "inline";
+		            document.getElementById("bad").style.display = "none";
+                }
+                if(randomNumber==2){
+                    document.getElementById("good").style.display = "none";
+		            document.getElementById("bad").style.display = "inline";
+                }
+            }
+        </script>
+        <title>
+            Changing content on reload
+        </title>
+    </head>
+    <body>
+        <div id="good"><h1>Have a GOOD day!</h1></div>
+        <div id="bad"><h1>Have a BAD day!</h1></div>
+    </body>
+</html>

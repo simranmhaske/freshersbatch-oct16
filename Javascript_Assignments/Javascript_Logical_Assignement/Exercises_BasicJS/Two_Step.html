@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction(){
+                var hundredNums=[];
+                for(i=0;i<100;i++){
+                    hundredNums[i]=Math.random();
+                }
+                document.getElementById('result').innerHTML=hundredNums.join("<br>");
+            }
+        </script>
+        <title>
+            Array of 100 random numbers
+        </title>
+    </head>
+    <body>
+        <h2>Creating an Array of 100 random numbers</h2>
+        <input type="button" value="Display" onclick="myFunction()"/>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction(){
+                var fourNums=[Math.random(),Math.random(),Math.random(),Math.random()];
+                
+                    document.getElementById('result').innerHTML=fourNums;
+            }
+        </script>
+        <title>
+            One Step Array
+        </title>
+
+    </head>
+    <body>
+        <h2>Array containing four random numbers.</h2>
+        <input type="button" value="Print" onclick="myFunction()"/><br>
+        <label>The Array is: </label>
+        <div id="result"></div>
+    </body>
+</html>

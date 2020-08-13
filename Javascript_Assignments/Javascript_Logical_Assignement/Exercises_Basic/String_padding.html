@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            
+            function pad(){
+                var num=Number(document.getElementById('num').value);
+                var str=document.getElementById('string').value;
+                var str1="";
+                for(i=0;i<num;i++){
+                    str1+=str;
+                }
+                document.getElementById('result').innerHTML=str1;
+                return false;
+            }
+        </script>
+        <title>
+            String Padding
+        </title>
+    </head>
+    <body>
+        Enter how many times to repeat the string:<br>
+        <input type="number" id="num" placeholder="Enter the number"/><br><br>
+        Enter the String to be repeated:<br>
+        <input type="text" id="string" placeholder="Enter the string"/><br><br>
+        <input type="button" value="Check" onclick="pad()"/>
+        <div><p id="result"></p></div>
+    </body>
+</html>

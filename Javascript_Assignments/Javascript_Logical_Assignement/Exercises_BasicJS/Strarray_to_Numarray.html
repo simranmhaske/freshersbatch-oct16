@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function conversion(){
+             var strArray=["12","34","56"];
+             var numArray=[];
+             for(i=0;i<strArray.length;i++){
+                document.getElementById('stringvalues').innerHTML="The values of the array before conversion were: " +strArray;
+             document.getElementById('strtype').innerHTML="The values above are of type: "+typeof(strArray[i]);
+            }
+            numArray=strArray.map(Number);
+            for(i=0;i<numArray.length;i++){
+                document.getElementById('numvalues').innerHTML="The values of the array after conversion are: " +numArray;
+             document.getElementById('numtype').innerHTML="The values above are of type: "+typeof(numArray[i]);
+            }
+            }
+        </script>
+        <title>
+            String Array to String Number
+        </title>
+    </head>
+    <body>
+        <h2>Converting a String array to a Number array</h2>
+        <input type="button" value="Convert" onclick="conversion()"/>
+        <div id="stringvalues"></div>
+        <div id="strtype"></div>
+        <div id="numvalues"></div>
+        <div id="numtype"></div>
+    </body>
+</html>

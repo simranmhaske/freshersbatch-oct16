@@ -1,0 +1,9 @@
+#cake{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#head{
+    text-align: center;
+    color: red;
+}
